@@ -1,0 +1,27 @@
+{
+    "name" : "ca",
+    "components" : [
+        {
+            "name": "security",
+            "module": null
+        },
+        {
+            "module": "../../index.js#plug_ca",
+            "name": "crossapp",
+            "description": "Manages a cross-app call service for a CA",
+            "env" : {
+                "maxRetries" : "$._.env.maxRetries",
+                "retryDelay" : "$._.env.retryDelay"
+            },
+            "components" : [
+                {
+                    "module": "../../index.js#proxy",
+                    "name": "proxy",
+                    "description": "Allows access to this CA call service",
+                    "env" : {
+                    }
+                }
+            ]
+        }
+    ]
+}

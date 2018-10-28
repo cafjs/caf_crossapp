@@ -1,0 +1,36 @@
+{
+    "name": "top",
+    "env" : {
+        "appProtocol" : "http",
+        "appPublisher" :"root",
+        "appLocalName" : "test",
+        "appSuffix" : "vcap.me:3000"
+    },
+    "components": [
+        {
+            "name": "log",
+            "env" : {
+                  "logLevel" : "DEBUG"
+
+            }
+
+        },
+        {
+            "name": "security",
+            "module": null
+        },
+        {
+            "name": "cp2"
+        },
+        {
+            "name": "crossapp",
+            "module": "../../index.js#plug",
+            "description": "Cross application call service.",
+            "env" : {
+                "appSuffix" : "$._.env.appSuffix",
+                "appProtocol" : "$._.env.appProtocol",
+                "strictArgs" : false
+            }
+        }
+    ]
+}
