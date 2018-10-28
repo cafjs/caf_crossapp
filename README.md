@@ -8,7 +8,6 @@ See http://www.cafjs.com
 
 [![Build Status](https://travis-ci.org/cafjs/caf_crossapp.svg?branch=master)](https://travis-ci.org/cafjs/caf_crossapp)
 
-
 This repository contains a CAF library that implements interactions between applications.
 
 Applications, even from the same owner, never trust each other. Therefore, cross-app interactions are similar to an external client accessing the target application, i.e., explicit tokens are needed to secure the interaction.
