@@ -17,12 +17,12 @@ var APP_FULL_NAME = 'root-test';
 var CA_OWNER_1='me'+ crypto.randomBytes(8).toString('hex');
 var CA_LOCAL_NAME_1='ca1';
 var FROM_1 =  CA_OWNER_1 + '-' + CA_LOCAL_NAME_1;
-var FQN_1 = APP_FULL_NAME + '-' + FROM_1;
+var FQN_1 = APP_FULL_NAME + '#' + FROM_1;
 
 var CA_OWNER_2=CA_OWNER_1;
 var CA_LOCAL_NAME_2='ca2';
 var FROM_2 =  CA_OWNER_2 + '-' + CA_LOCAL_NAME_2;
-var FQN_2 = APP_FULL_NAME + '-' + FROM_2;
+var FQN_2 = APP_FULL_NAME + '#' + FROM_2;
 
 process.on('uncaughtException', function (err) {
                console.log("Uncaught Exception: " + err);
