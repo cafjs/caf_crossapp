@@ -1,18 +1,18 @@
-# CAF.js (Cloud Assistant Framework)
+# Caf.js
 
 Co-design permanent, active, stateful, reliable cloud proxies with your web app and gadgets.
 
-See http://www.cafjs.com
+See https://www.cafjs.com
 
-## CAF lib cross-application interaction
+## Library for cross-application interaction
 
 [![Build Status](https://travis-ci.org/cafjs/caf_crossapp.svg?branch=master)](https://travis-ci.org/cafjs/caf_crossapp)
 
-This repository contains a CAF library that implements interactions between applications.
+This repository contains a `Caf.js` library that enables interactions between applications.
 
-Applications, even from the same owner, never trust each other. Therefore, cross-app interactions are similar to an external client accessing the target application, i.e., explicit tokens are needed to secure the interaction.
+Applications, even from the same owner, never trust each other. Cross-app interactions are similar to an external client accessing the target application, i.e., security tokens are needed to authenticate the interaction.
 
-When we want a method open to anybody, e.g., when the arguments to that method are signed tokens that can be validated, we can enable the user `nobody` (see property `allowNobodyUser` in `caf_security`). This bypasses the authentication checks.
+To enable methods to be called by anybody, we can enable the user `nobody` (see property `allowNobodyUser` in `caf_security`), and this bypasses the authentication checks for that user. Security can then rely on, for example, signed tokens explicitly passed as arguments to the method. The application `caf_gadget` follows this approach.
 
 ## API
 
