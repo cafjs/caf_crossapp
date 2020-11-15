@@ -45,6 +45,14 @@ exports.methods = {
         this.state.pendingId = id;
         return this.getState();
     },
+    async isAppRunning(app) {
+        try {
+            const isR = await this.$.crossapp.dirtyIsAppRunning(app);
+            return [null, isR];
+        } catch (err) {
+            return [err];
+        }
+    },
     async handler(id, response) {
         this.state.lastResponse = {id: id, response: response};
         if (!response[0]) {
