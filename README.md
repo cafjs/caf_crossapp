@@ -6,7 +6,7 @@ See https://www.cafjs.com
 
 ## Library for cross-application interaction
 
-[![Build Status](https://travis-ci.org/cafjs/caf_crossapp.svg?branch=master)](https://travis-ci.org/cafjs/caf_crossapp)
+[![Build Status](https://github.com/cafjs/caf_crossapp/actions/workflows/push.yml/badge.svg)](https://github.com/cafjs/caf_crossapp/actions/workflows/push.yml)
 
 This repository contains a `Caf.js` library that enables interactions between applications.
 
