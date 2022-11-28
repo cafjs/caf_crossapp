@@ -66,7 +66,7 @@ module.exports = {
         async.series(
             [
                 function(cb) {
-                    s1 = new cli.Session('ws://root-test.vcap.me:3000', from1, {
+                    s1 = new cli.Session('ws://root-test.localtest.me:3000', from1, {
                         from : from1
                     });
                     s1.onopen = async function() {
